@@ -1,3 +1,4 @@
+![CI](https://github.com/Ephyoma/ecommerce-test-automation/actions/workflows/python-tests.yml/badge.svg)
 # E-Commerce Selenium Test Suite
 
 ## 💡 Objective
