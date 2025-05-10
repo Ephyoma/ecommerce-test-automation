@@ -1,0 +1,28 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+venv/
+env/
+.venv/
+.venv.bak/
+
+# Test reports & logs
+reports/
+screenshots/
+*.log
+
+# VS Code config
+.vscode/
+
+# Pytest cache
+.pytest_cache/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS files
+.DS_Store
+Thumbs.db

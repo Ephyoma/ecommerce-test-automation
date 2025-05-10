@@ -1,0 +1,9 @@
+from pages.login_page import LoginPage
+
+def test_locked_out_user_cannot_login(driver):
+    login = LoginPage(driver)
+    login.load()
+    login.login("locked_out_user", "secret_sauce")
+
+    error = login.driver.find_element("css selector", "[data-test='error']").text
+    assert "locked out" in error.lower()

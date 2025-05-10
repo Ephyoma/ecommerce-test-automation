@@ -1,0 +1,21 @@
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+class ConfirmationPage:
+    def __init__(self, driver):
+        self.driver = driver
+        self.wait = WebDriverWait(driver, 10)
+
+    def is_order_successful(self):
+        try:
+            header = self.wait.until(
+                EC.visibility_of_element_located((By.CLASS_NAME, "complete-header"))
+            )
+            return "thank you for your order!" in header.text.strip().lower()
+        except Exception as e:
+            print("Order confirmation check failed:", e)
+            return False
+
+    def capture_screenshot(self, path="screenshots/confirmation.png"):
+        self.driver.save_screenshot(path)
